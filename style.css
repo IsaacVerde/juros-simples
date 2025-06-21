@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão para todo o corpo */
+    background-color: #f0f2f5; /* Fundo cinza claro e suave */
+    display: flex; /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    margin: 0; /* Remove margens padrão do body */
+    color: #333; /* Cor de texto padrão para boa legibilidade */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Fonte mais impactante para o título */
+    font-weight: 700; /* Negrito */
+    color: #2c3e50; /* Azul petróleo escuro para um toque sofisticado */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    font-size: 2em; /* Tamanho do título em relação ao tamanho base da fonte */
+}
+/* Estilo para o formulário */
+form#form-juros {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    gap: 15px; /* Espaçamento entre os elementos do formulário */
+}
+form#form-juros label {
+    display: block; /* Garante que a label ocupe sua própria linha */
+    text-align: left; /* Alinha o texto da label à esquerda */
+    margin-bottom: 5px; /* Espaçamento entre a label e o input */
+    font-weight: 500; /* Levemente mais negrito que o texto padrão */
+    color: #555; /* Cor mais suave para as labels */
+    font-size: 1.1em; /* Um pouco maior que o texto padrão */
+}
+form#form-juros input[type="number"] {
+    width: 100%; /* Ocupa a largura total do seu container pai */
+    padding: 12px; /* Espaçamento interno do input */
+    border: 1px solid #ccc; /* Borda fina e discreta */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1.1em; /* Tamanho da fonte dentro do input */
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o foco */
+}
+form#form-juros input[type="number"]:focus {
+    border-color: #3498db; /* Borda azul ao focar */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Brilho suave azul ao focar */
+    outline: none; /* Remove a borda padrão do navegador ao focar */
+}
+form#form-juros button[type="submit"] {
+    background-color: #2ecc71; /* Verde esmeralda para o botão de ação */
+    color: white; /* Texto branco */
+    padding: 15px 30px; /* Espaçamento interno do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1.2em; /* Tamanho da fonte do botão */
+    font-weight: 600; /* Negrito */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves para hover */
+    margin-top: 25px; /* Espaçamento acima do botão */
+    width: 100%; /* Botão ocupa a largura total */
+    box-sizing: border-box;
+}
+
+form#form-juros button[type="submit"]:hover {
+    background-color: #27ae60; /* Escurece o verde no hover */
+    transform: translateY(-2px); /* Efeito sutil de "levantar" */
+}
+div#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    font-size: 1.4em; /* Tamanho maior para o texto do resultado */
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center; /* Centraliza o texto de cada parágrafo dentro da div */
+    min-height: 40px; /* Mantém uma altura mínima */
+    
+    /* Importante: para que os <p> fiquem um abaixo do outro, 'display: block;' ou 'display: flex' (com flex-direction: column) funcionam para o container. 
+       Se o display da div#resultado estiver como 'flex', certifique-se de que 'flex-direction' é 'column'.
+       Se não tiver 'flex' nem 'grid', 'block' é o padrão e os <p> já ficam um abaixo do outro.
+    */
+    display: block; /* Ou mantenha como 'flex' e adicione 'flex-direction: column;' */
+}
+
+/* Estilo para os parágrafos dentro da div de resultado */
+div#resultado p {
+    margin: 8px 0; /* Espaçamento de 8px acima e abaixo de cada parágrafo */
+    line-height: 1.4; /* Espaçamento entre as linhas do texto dentro de cada parágrafo */
+    font-weight: 600; /* Pode ajustar o peso da fonte aqui se quiser diferente do container */
+    color: #333; /* Cor mais escura para o texto dentro dos parágrafos, se o #2c3e50 for muito escuro */
+}
