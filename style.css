@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif; /* Define a fonte padrão para todo o corpo */
-    background-color: #f0f2f5; /* Fundo cinza claro e suave */
+    background-image: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     display: flex; /* Usa Flexbox para centralizar o conteúdo */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
@@ -48,7 +48,7 @@ form#form-juros input[type="number"]:focus {
     outline: none; /* Remove a borda padrão do navegador ao focar */
 }
 form#form-juros button[type="submit"] {
-    background-color: #2ecc71; /* Verde esmeralda para o botão de ação */
+    background-color: #9db7e1; /* Verde esmeralda para o botão de ação */
     color: white; /* Texto branco */
     padding: 15px 30px; /* Espaçamento interno do botão */
     border: none; /* Sem borda */
@@ -63,7 +63,7 @@ form#form-juros button[type="submit"] {
 }
 
 form#form-juros button[type="submit"]:hover {
-    background-color: #27ae60; /* Escurece o verde no hover */
+    background-color:  #3498db; /* Escurece o verde no hover */
     transform: translateY(-2px); /* Efeito sutil de "levantar" */
 }
 div#resultado {
